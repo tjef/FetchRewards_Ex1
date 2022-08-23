@@ -2,8 +2,8 @@
 
 FROM python:3.8
 
-ADD example1.py .
-RUN pip install numpy
+ADD main.py .
+RUN pip install numpy ast json example1 
+CMD ["python" , "./main.py"]
 
-CMD ["python" , "./example1.py"]
 
