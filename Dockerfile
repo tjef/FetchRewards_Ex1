@@ -2,8 +2,16 @@
 
 FROM python:3.8
 
-ADD main.py .
-RUN pip install numpy ast json example1 
-CMD ["python" , "./main.py"]
+WORKDIR /flask-app
+
+COPY req.txt .
+
+RUN pip install -r req.txt
+
+COPY ./app ./app
+
+CMD ["python" , "./app/main.py"]
+
+
 
 

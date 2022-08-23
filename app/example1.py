@@ -1,15 +1,19 @@
 import numpy as np
 import ast
-tuple = ast.literal_eval(input('Enter tuple: '))
+
+x = input('Enter the tuple : ')
+x = tuple(int(a) for a in x.split(","))
+# print(x)
+# tuple = ast.literal_eval(input('Enter tuple: '))
 corner_points = ast.literal_eval(input('Enter List: '))
 
 
-count = 0
+# count = 0
 
 # tuple = (10,12)
 output = []
-test = np.array([[1.0, 1.0], [2.0, 1.0], [3.0, 1.0]])
-shape = test.shape
+# test = np.array([[1.0, 1.0], [2.0, 1.0], [3.0, 1.0]])
+# shape = test.shape
 #Given dimensions & Corner Points
 row = tuple[0]
 # corner_point= input("Enter tuple")
@@ -25,10 +29,13 @@ sorted_list = sorted(
 )
 # sorted_list = [(1, 1), (1, 3), (3, 1), (3, 3)]
 start = sorted_list[0][0]
-length_1 = column - start 
-for i in range(start, column+1):
-    x = np.arange(start,column+start, dtype = int)
-    y = np.ones(column, dtype = int)*i #hieght
+begin = int(start)
+end = sorted_list[-1][1]
+
+# length_1 = column - start 
+for i in range(begin, end+1):
+    x = np.arange(begin,end+start, dtype = int)
+    y = np.ones(end, dtype = int)*i #hieght
     result = np.stack((x, y), axis= 1)
     output.append(result.tolist())
 # print(output)
