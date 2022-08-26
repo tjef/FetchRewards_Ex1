@@ -2,11 +2,11 @@
 
 FROM python:3.8
 
-WORKDIR /flask-app
+WORKDIR /flask-application
 
-COPY req.txt .
+COPY requirements.txt .
 
-RUN pip install -r req.txt
+RUN pip install -r requirements.txt
 
 COPY ./app ./app
 
