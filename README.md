@@ -1,5 +1,7 @@
 Instructions
-
+    Using Docker
+        - docker build -t python-faskapplication . 
+        - docker run -p 5000:5000 python-faskapplication
     Step 1: Run main.py
 
     Step 2: Open IP:5000 on web browser 
