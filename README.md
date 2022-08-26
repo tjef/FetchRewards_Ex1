@@ -1,10 +1,11 @@
 Instructions
 
     Using Docker
+        1. open powershell 
     
-        - docker build -t python-faskapplication . 
+        2. docker build -t python-faskapplication . 
         
-        - docker run -p 5000:5000 python-faskapplication
+        3. docker run -p 5000:5000 python-faskapplication
         
     Step 1: Run main.py
 
