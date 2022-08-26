@@ -3,7 +3,7 @@
 from flask import Flask,render_template,request
 import json
 import  ast
-import  example1
+import  exercice
 app = Flask(__name__)
 
 @app.route('/', methods=['POST', 'GET'])
@@ -11,7 +11,7 @@ def home():
     if request.method == 'POST':
         tuples = request.form.get('tuple')
         points = request.form.get('CornerPoint')
-        obj = example1.Example1(tuples, points) 
+        obj = exercice.ListPrint(tuples, points) 
         result = obj.output()
         return str(result)
     return render_template('form.html')
